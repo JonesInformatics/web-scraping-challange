@@ -127,13 +127,13 @@ def scrape():
 
     image_soup = bs(image_html, 'html.parser')
     # image_soup.select_one(".fancybox-image").get('src')
-    fetured_img_rel=image_soup.select_one(".carousel_item").get('style')
-    fetured_img_rel=fetured_img_rel.split("\'")[1]
+    featurerd_img_rel=image_soup.select_one(".carousel_item").get('style')
+    featurerd_img_rel=featurerd_img_rel.split("\'")[1]
 
-    fetured_img=f'https://www.jpl.nasa.gov{fetured_img_rel}'
+    featurerd_img=f'https://www.jpl.nasa.gov{featurerd_img_rel}'
 
 
-    mars_dict = {"hemisphere_url": hemisphere_url,"title": title, "paragraph":paragraph,"mars_weather":mars_weather,"table_html": table_html,"fetured_img":fetured_img}
+    mars_dict = {"hemisphere_url": hemisphere_url,"title": title, "paragraph":paragraph,"mars_weather":mars_weather,"table_html": table_html,"featurerd_img":featurerd_img}
 
     # Close the browser after scraping
     browser.quit()
